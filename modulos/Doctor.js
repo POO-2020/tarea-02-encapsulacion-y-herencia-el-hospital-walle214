@@ -9,11 +9,12 @@ export default class Doctor {
      * @param {String} cedula 
      */
     constructor(nombre, especialidad, telefono, cedula) {
-        this.nombre = nombre;
-        this.especialidad = especialidad;
-        this.telefono = telefono;
-        this.cedula = cedula;
+        this._nombre = nombre;
+        this._especialidad = especialidad;
+        this._telefono = telefono;
+        this._cedula = cedula;
     }
-    getPerfil = _ => `Cedula: ${this.cedula}\nEspecialidad: ${this.especialidad}\nNombre ${this.nombre.getNombreCompleto()}\nTelefono: ${this.telefono}`;
+    getApellido = _ => this.nombre.getApellido();
+    getPerfil = _ => `Cedula: ${this._cedula}\nEspecialidad: ${this._especialidad}\nNombre ${this._nombre.getNombreCompleto()}\nTelefono: ${this._telefono}`;
 
 }

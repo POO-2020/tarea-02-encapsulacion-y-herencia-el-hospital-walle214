@@ -8,10 +8,13 @@ export default class Paciente {
      * @param {Number} telefono 
      */
     constructor(nombre, fechaNacimiento, telefono) {
-        this.nombre = nombre;
-        this.fechaNacimiento = fechaNacimiento;
-        this.telefono = telefono;
+        this._nombre = nombre;
+        this._fechaNacimiento = fechaNacimiento;
+        this._telefono = telefono;
     }
-    getPerfil = _ => `${this.nombre.getNombreCompleto()} ${this.fechaNacimiento.getFecha()} ${this.telefono}`;
+
+    getNombreCompleto = _ => this._nombre.getNombreCompleto();
+
+    getPerfil = _ => `${this._nombre.getNombreCompleto()} ${this._fechaNacimiento.getFecha()} ${this._telefono}`;
 
 }

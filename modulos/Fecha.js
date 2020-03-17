@@ -6,24 +6,25 @@ export default class Fecha {
      * @param {String} annio Año de la fecha
      */
     constructor(dia, mes, annio) {
-        this.fecha = new Date(annio, mes, dia);
+        this._fecha = new Date(annio, mes, dia);
     }
-    getMsecTrascurridos = _ => Date.now() - this.fecha;
 
-    getAnnios = _ => Math.trunc(this.getMsecTrascurridos() / 31557600000);
+    _parseMsec = msec => Math.trunc((Date.now() - this._fecha) / msec);
 
-    getMeses = _ => Math.trunc(this.getMsecTrascurridos() / 2629800000);
+    getAnnios = _ => this._parseMsec(31557600000);
 
-    getSemanas = _ => Math.trunc(this.getMsecTrascurridos() / 604800000);
+    getMeses = _ => this._parseMsec(2629800000);
 
-    getDias = _ => Math.trunc(this.getMsecTrascurridos() / 86400000);
+    getSemanas = _ => this._parseMsec(604800000);
+
+    getDias = _ => this._parseMsec(86400000);
 
     getFecha = _ => {
         const meses = ['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Agto', 'Sept', 'Oct', 'Nov', 'Dic'];
-        return `${this.fecha.getDate()}/${meses[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`;
+        return `${this._fecha.getDate()}/${meses[this._fecha.getMonth()]}/${this._fecha.getFullYear()}`;
     }
     getDiaFecha = _ => {
         const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-        return dias[this.fecha.getDay()];
+        return dias[this._fecha.getDay()];
     }
 }
