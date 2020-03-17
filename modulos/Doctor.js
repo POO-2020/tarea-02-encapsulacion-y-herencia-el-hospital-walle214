@@ -1,14 +1,5 @@
-import Nombre from "./Nombre.js";
-
 export default class Doctor {
-    /**
-     * 
-     * @param {Nombre} nombre 
-     * @param {String} especialidad 
-     * @param {Number} telefono 
-     * @param {String} cedula 
-     */
-    constructor(nombre, especialidad, telefono, cedula) {
+    constructor({nombre, especialidad, telefono, cedula}) {
         this._nombre = nombre;
         this._especialidad = especialidad;
         this._telefono = telefono;
