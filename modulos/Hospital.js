@@ -2,12 +2,7 @@ import Doctor from "./Doctor.js";
 import Cita from "./Cita.js";
 
 export default class Hospital {
-    /**
-     * 
-     * @param {String} nombre nombre del hospital
-     * @param {String} direccion direccion del hospital
-     */
-    constructor(nombre, direccion) {
+    constructor({nombre, direccion}) {
         this._nombre = nombre;
         this._direccion = direccion;
         this._doctores = [];
