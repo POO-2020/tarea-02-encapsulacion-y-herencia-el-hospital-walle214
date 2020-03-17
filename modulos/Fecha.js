@@ -1,9 +1,9 @@
 export default class Fecha {
     /**
      * 
-     * @param {String} dia Dia del mes
-     * @param {String} mes Mes del año, comienza en 0(Enero)
-     * @param {String} annio Año de la fecha
+     * @param {Number} dia Dia del mes
+     * @param {Number} mes Mes del año, comienza en 0(Enero)
+     * @param {Number} annio Año de la fecha
      */
     constructor(dia, mes, annio) {
         this._fecha = new Date(annio, mes, dia);
