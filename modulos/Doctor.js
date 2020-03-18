@@ -7,7 +7,7 @@ export default class Doctor {
     }
     esIgual = doctor => this.getPerfil() == doctor.getPerfil();
 
-    getApellido = _ => this.nombre.getApellido();
+    getApellido = _ => this._nombre.getApellido();
 
     getPerfil = _ => `Cedula: ${this._cedula}\nEspecialidad: ${this._especialidad}\nNombre ${this._nombre.getNombreCompleto()}\nTelefono: ${this._telefono}`;
 }
