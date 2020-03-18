@@ -1,10 +1,12 @@
 export default class Cita {
-    constructor({fecha, hora, doctor, paciente}) {
+    constructor({ fecha, hora, doctor, paciente }) {
         this._fecha = fecha;
         this._hora = hora;
         this._doctor = doctor;
         this._paciente = paciente;
     }
+    esIgual = cita => (this.getCita() == cita.getCita());
+
     getCita = _ =>
         `${
         this._fecha.getFecha()
