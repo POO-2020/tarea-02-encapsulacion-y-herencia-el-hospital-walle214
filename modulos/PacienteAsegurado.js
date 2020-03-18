@@ -1,19 +1,27 @@
 import Paciente from "./Paciente.js";
 
-class PacienteAsegurado extends Paciente {
+export default class PacienteAsegurado extends Paciente {
     /**
      * 
      * @param {*} AtributosClienteAsegurado
      * @param {*} p  Parametros para el paciente normal
      */
     constructor(
-        { numeroPoliza, finVigencia, compañia },
-        p = { nombre, fechaNacimiento, telefono }) {
+        {
+            numeroPoliza,
+            finVigencia,
+            compannia,
+            nombre,
+            fechaNacimiento,
+            telefono
+        }
+    ) {
 
-        super(p);
+
+        super({ nombre, fechaNacimiento, telefono });
         this._numeroPoliza = numeroPoliza;
         this._finVigencia = finVigencia;
-        this._compañia = compañia;
+        this._compannia = compannia;
     }
 
     getPerfil = _ =>
@@ -28,7 +36,7 @@ class PacienteAsegurado extends Paciente {
         } ${
         this._finVigencia.getFecha()
         } ${
-        this._compañia
+        this._compannia
         }`;
 
 }
