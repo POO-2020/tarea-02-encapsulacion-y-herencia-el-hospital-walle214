@@ -50,7 +50,7 @@ export default class Hospital {
 
 
     buscarCita = cita =>
-        this._citas.findIndex(c => cita.esIgual(c));
+        this._citas.findIndex(c => c.esIgual(cita));
 
     registrarCita = cita => {
         if (this.buscarCita(cita) < 0) {
@@ -77,6 +77,6 @@ export default class Hospital {
         return false;
     }
 
-    listarCitas = _ => this._citas.forEach(c => console.log(c.getCita(), '\n'));
+    listarCitas = _ => this._citas.forEach(c => console.log(c.getCita()));
 
 }
