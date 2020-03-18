@@ -141,3 +141,16 @@ const probarFechas = _ =>
 const probarTiempo = _ =>
     console.log(tiempo1.getFormato12(), tiempo1.getFormato24());
 // probarTiempo();
+const probarNombre = _ =>
+    console.log(
+        nombre2.getApellido(),
+        nombre2.getApellidoNombre(),
+        nombre2.getIniciales(),
+        nombre2.getNombreCompleto()
+    );
+// probarNombre();
+const probarPaciente = _ => {
+    console.log(paciente1.getNombreCompleto(),paciente1.getPerfil());
+    console.log(paciente4.getNombreCompleto(),paciente4.getPerfil());
+}
+// probarPaciente();
