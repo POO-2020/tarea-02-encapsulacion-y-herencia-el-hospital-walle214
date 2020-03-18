@@ -28,7 +28,7 @@ export default class Hospital {
      */
     eliminarDoctor = doctor => {
         const index = this.buscarDoctor(doctor);
-        if (!index < 0) {
+        if (!(index < 0)) {
             this._doctores.splice(index, 1);
             return true;
         }
@@ -40,7 +40,7 @@ export default class Hospital {
      */
     actualizarDoctor = (viejoDoctor, nuevoDoctor) => {
         const index = this.buscarDoctor(viejoDoctor);
-        if (!index < 0) {
+        if (!(index < 0)) {
             this._doctores.splice(index, 1, nuevoDoctor);
             return true;
         }
@@ -62,7 +62,7 @@ export default class Hospital {
 
     eliminarCita = cita => {
         const index = this.buscarCita(cita);
-        if (!index < 0) {
+        if (!(index < 0)) {
             this._citas.splice(index, 0);
             return true;
         }
@@ -70,7 +70,7 @@ export default class Hospital {
     }
     editarCita = (viejaCita, nuevaCita) => {
         const index = this.buscarCita(viejaCita);
-        if (!index < 0) {
+        if (!(index < 0)) {
             this._citas.splice(index, 0, nuevaCita);
             return true;
         }
