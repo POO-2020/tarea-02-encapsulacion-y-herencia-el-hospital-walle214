@@ -162,3 +162,10 @@ const probarDoctor = __ =>
         doctor1.esIgual(doctor2)
     );
 // probarDoctor();
+const probarCita = _ =>
+    console.log(
+        cita1.getCita(),
+        cita1.esIgual(cita1),
+        cita1.esIgual(cita2)
+    );
+// probarCita();
