@@ -150,7 +150,15 @@ const probarNombre = _ =>
     );
 // probarNombre();
 const probarPaciente = _ => {
-    console.log(paciente1.getNombreCompleto(),paciente1.getPerfil());
-    console.log(paciente4.getNombreCompleto(),paciente4.getPerfil());
+    console.log(paciente1.getNombreCompleto(), paciente1.getPerfil());
+    console.log(paciente4.getNombreCompleto(), paciente4.getPerfil());
 }
 // probarPaciente();
+const probarDoctor = __ =>
+    console.log(
+        doctor1.getPerfil(),
+        doctor1.getApellido(),
+        doctor1.esIgual(doctor1),
+        doctor1.esIgual(doctor2)
+    );
+// probarDoctor();
