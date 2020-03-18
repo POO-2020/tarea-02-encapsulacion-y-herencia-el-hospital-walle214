@@ -138,3 +138,6 @@ const probarFechas = _ =>
     )
 
 // probarFechas();
+const probarTiempo = _ =>
+    console.log(tiempo1.getFormato12(), tiempo1.getFormato24());
+// probarTiempo();
