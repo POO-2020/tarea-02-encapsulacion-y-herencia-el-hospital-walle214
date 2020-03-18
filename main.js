@@ -126,3 +126,15 @@ const hospital = new Hospital({
     nombre:'Santa Fé Clan',
     direccion:'Belisario Dominguez #39'
 });
+
+const probarFechas = _ => {
+    console.log(
+        fecha1.getAnnios(),
+        fecha1.getDiaFecha(),
+        fecha1.getDias(),
+        fecha1.getFecha(),
+        fecha1.getMeses(),
+        fecha1.getSemanas(),
+    )
+}
+// probarFechas();
