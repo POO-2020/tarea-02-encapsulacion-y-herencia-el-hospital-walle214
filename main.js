@@ -169,3 +169,29 @@ const probarCita = _ =>
         cita1.esIgual(cita2)
     );
 // probarCita();
+const probarHospital = _ => {
+    console.log(hospital.registrarDoctor(doctor1));
+    console.log(hospital.registrarDoctor(doctor1));
+    console.log(hospital.registrarDoctor(doctor2));
+    console.log(hospital.registrarDoctor(doctor3));
+    hospital.listarDoctores();
+
+    console.log(hospital.eliminarDoctor(doctor3));
+    hospital.listarDoctores();
+
+    console.log(hospital.actualizarDoctor(doctor1, doctor3));
+    hospital.listarDoctores();
+
+    console.log(hospital.registrarCita(cita1));
+    console.log(hospital.registrarCita(cita1));
+    console.log(hospital.registrarCita(cita2));
+    console.log(hospital.registrarCita(cita3));
+    hospital.listarCitas();
+
+    console.log(hospital.eliminarCita(cita1));
+    hospital.listarCitas();
+
+    console.log(hospital.editarCita(cita2,cita1));
+    hospital.listarCitas();
+}
+// probarHospital();
