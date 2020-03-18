@@ -123,11 +123,11 @@ const cita2 = new Cita(datosCita2);
 const cita3 = new Cita(datosCita3);
 
 const hospital = new Hospital({
-    nombre:'Santa Fé Clan',
-    direccion:'Belisario Dominguez #39'
+    nombre: 'Santa Fé Clan',
+    direccion: 'Belisario Dominguez #39'
 });
 
-const probarFechas = _ => {
+const probarFechas = _ =>
     console.log(
         fecha1.getAnnios(),
         fecha1.getDiaFecha(),
@@ -136,5 +136,5 @@ const probarFechas = _ => {
         fecha1.getMeses(),
         fecha1.getSemanas(),
     )
-}
+
 // probarFechas();
